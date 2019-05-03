@@ -8,8 +8,8 @@ const bodyParser = require('body-parser')
 // Call Express
 const app = express();
 
-// Localhost
-const port = 3000;
+// Heroku server || Localhost
+const port = process.env.PORT || 3000;
 
 // Body parser
 app.use(bodyParser.urlencoded({ extended : true }));
